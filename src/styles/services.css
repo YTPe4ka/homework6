@@ -1,0 +1,82 @@
+.services-page {
+  min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
+  padding: 50px; /* Отступы внутри страницы */
+  text-align: center;
+  background: #FFE6D2; /* Цвет фона */
+}
+
+
+.services-header h1 {
+  font-size: 2.5rem;
+  color: #232536;
+}
+
+.services-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.services-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin-top: 30px;
+}
+
+.service-item {
+  background: #ffffff;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.service-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.service-item h3 {
+  font-size: 1.5rem;
+  color: #232536;
+}
+
+.service-item p {
+  font-size: 1rem;
+  color: #555;
+  margin-top: 10px;
+}
+
+.services-right ul {
+  list-style-type: none; /* Убирает точки у списка */
+  padding: 0; /* Убирает отступы у списка */
+  margin: 0;
+}
+
+.services-right li {
+  margin: 10px 0; /* Добавляет расстояние между элементами списка */
+  font-size: 1.1rem;
+  color: #232536; /* Цвет текста */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.services-right li:hover {
+  color: #3b82f6; /* Изменяет цвет при наведении */
+}
+.services-layout {
+  display: flex;
+  justify-content: space-between; /* Разделяет содержимое по сторонам */
+  align-items: flex-start;
+}
+
+.services-left {
+  width: 50%; /* Занимает половину ширины */
+  text-align: left;
+}
+
+.services-right {
+  width: 40%; /* Занимает часть ширины */
+  text-align: left;
+}

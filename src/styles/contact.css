@@ -1,0 +1,24 @@
+.contact-page {
+  padding: 50px;
+  background-color: #ffffff; /* Белый фон */
+  text-align: center;
+}
+
+.contact-header h1 {
+  font-size: 2.5rem;
+  color: #232536;
+  margin-bottom: 20px;
+}
+
+.contact-header p {
+  font-size: 1.2rem;
+  color: #555;
+  margin-bottom: 40px;
+}
+
+.contact-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  object-fit: cover;
+}

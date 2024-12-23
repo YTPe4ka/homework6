@@ -1,0 +1,48 @@
+/* General styles for Home */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+  
+  .home-page {
+    background: #232536; /* Тёмный фон для главной страницы */
+    color: #fff;
+    min-height: 100vh;
+  }
+  
+  .hero-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px;
+  }
+  
+  .hero-text {
+    max-width: 50%;
+  }
+  
+  .hero-text h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .hero-text p {
+    margin-bottom: 20px;
+    line-height: 1.5;
+  }
+  
+  .quote-button {
+    background-color: #3b82f6;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-size: 16px;
+  }
+  
+  .hero-image img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+  }
+  
