@@ -1,11 +1,11 @@
-/* General styles for Home */
+
 body {
     margin: 0;
     font-family: Arial, sans-serif;
   }
   
   .home-page {
-    background: #232536; /* Тёмный фон для главной страницы */
+    background: #232536; 
     color: #fff;
     min-height: 100vh;
   }

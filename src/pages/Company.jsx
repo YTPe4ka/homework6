@@ -1,8 +1,8 @@
 import React from "react";
 import "../styles/company.css";
-import i from "../assets/img/image 1.png"
-import m from "../assets/img/image 2.png"
-import g from "../assets/img/image 3.png"
+import i from "../assets/img/image1.png"
+import m from "../assets/img/image2.png"
+import g from "../assets/img/image3.png"
 
 function Company() {
   return (

@@ -1,8 +1,8 @@
 .services-page {
-  min-height: 100vh; /* Минимальная высота равна высоте окна браузера */
-  padding: 50px; /* Отступы внутри страницы */
+  min-height: 100vh; 
+  padding: 50px; 
   text-align: center;
-  background: #FFE6D2; /* Цвет фона */
+  background: #FFE6D2; 
 }
 
 
@@ -49,34 +49,34 @@
 }
 
 .services-right ul {
-  list-style-type: none; /* Убирает точки у списка */
-  padding: 0; /* Убирает отступы у списка */
+  list-style-type: none; 
+  padding: 0; 
   margin: 0;
 }
 
 .services-right li {
-  margin: 10px 0; /* Добавляет расстояние между элементами списка */
+  margin: 10px 0;
   font-size: 1.1rem;
-  color: #232536; /* Цвет текста */
+  color: #232536; 
   font-weight: bold;
   cursor: pointer;
 }
 
 .services-right li:hover {
-  color: #3b82f6; /* Изменяет цвет при наведении */
+  color: #3b82f6; 
 }
 .services-layout {
   display: flex;
-  justify-content: space-between; /* Разделяет содержимое по сторонам */
+  justify-content: space-between; 
   align-items: flex-start;
 }
 
 .services-left {
-  width: 50%; /* Занимает половину ширины */
+  width: 50%; 
   text-align: left;
 }
 
 .services-right {
-  width: 40%; /* Занимает часть ширины */
+  width: 40%; 
   text-align: left;
 }
