@@ -1,33 +1,26 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import "../styles/login.css";
 
-function Login() {
-  const navigate = useNavigate();
-
-  const handleLogin = (event) => {
-    event.preventDefault(); // Предотвращаем стандартное поведение формы
-    navigate("/"); // Перенаправляем на главную страницу
-  };
-
+function LoginPopup({ onClose }) {
   return (
-    <div className="login-page">
-      <div className="login-container">
-        <h1>Login</h1>
-        <form onSubmit={handleLogin}>
+    <div className="popup-overlay">
+      <div className="popup-content">
+        <button className="close-button" onClick={onClose}>×</button>
+        <h2>Login</h2>
+        <form>
           <div className="form-group">
-            <label htmlFor="email">Email:</label>
-            <input type="email" id="email" placeholder="Enter your email" />
+            <label>Email:</label>
+            <input type="email" placeholder="Enter your email" />
           </div>
           <div className="form-group">
-            <label htmlFor="password">Password:</label>
-            <input type="password" id="password" placeholder="Enter your password" />
+            <label>Password:</label>
+            <input type="password" placeholder="Enter your password" />
           </div>
-          <button type="submit" className="login-button">Login</button>
+          <button type="submit" className="login-submit">Submit</button>
         </form>
       </div>
     </div>
   );
 }
 
-export default Login;
+export default LoginPopup;
