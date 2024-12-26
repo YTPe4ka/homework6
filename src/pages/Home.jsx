@@ -1,7 +1,27 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import "../styles/home.css";
-import img from "../assets/img/Image.png"
+import img from "../assets/img/Image.png";
+import ProductCard from "../components/ProductCard";
+
 function Home() {
+  const [products, setProducts] = useState([]);
+  const [selectedProduct, setSelectedProduct] = useState(null);
+
+  useEffect(() => {
+    fetch("https://dummyjson.com/products")
+      .then((response) => response.json())
+      .then((data) => setProducts(data.products))
+      .catch((error) => console.error("Error fetching products:", error));
+  }, []);
+
+  const handleCardClick = (product) => {
+    setSelectedProduct(product);
+  };
+
+  const closePopup = () => {
+    setSelectedProduct(null);
+  };
+
   return (
     <div className="home-page">
       <header className="hero-section">
@@ -14,12 +34,37 @@ function Home() {
           <button className="quote-button">Request Quote →</button>
         </div>
         <div className="hero-image">
-          <img
-            src={img}
-            alt="Team working together"
-          />
+          <img src={img} alt="Team working together" />
         </div>
       </header>
+
+      <section className="product-section">
+        <h2>Our Products</h2>
+        <div className="product-grid">
+          {products.map((product) => (
+            <ProductCard
+              key={product.id}
+              product={product}
+              onClick={() => handleCardClick(product)}
+            />
+          ))}
+        </div>
+      </section>
+
+      {selectedProduct && (
+        <div className="popup">
+          <div className="popup-content">
+            <h3>{selectedProduct.title}</h3>
+<br />  
+            <p>{selectedProduct.description}</p>
+<br />
+            <p>Price: ${selectedProduct.price}</p>
+            <button onClick={closePopup} className="close-popup">
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </div>
   );
 }

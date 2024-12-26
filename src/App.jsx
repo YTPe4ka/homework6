@@ -12,14 +12,15 @@ function App() {
 
   return (
     <>
-      {/* Navbar отображается только если текущий путь не "/login" */}
+      {/* Navbar отображается только если текущий путь не "/login" are u understand?*/ }
       {location.pathname !== "/login" && <Navbar />}
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
+        <Route path="/services" element={<Services/>} />
         <Route path="/company" element={<Company />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/login" element={<Login />} />
+        <Route path="*" element={<h1>404 Not Found</h1>} />
       </Routes>
     </>
   );
